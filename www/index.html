@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <script src="components/loader.js"></script>
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script  type="text/javascript">
+    function calc1()
+    {
+        with(document.form01)
+            txt02.value = eval(txt01.value);
+    }
+ function calc2()
+    {
+        with(document.form02)
+            txt04.value = eval(txt03.value);
+    }
+ function calc3()
+    {
+        with(document.form03)
+            txt06.value = eval(txt05.value);
+    }
+ function calc4()
+    {
+        with(document.form04)
+            txt08.value = eval(txt07.value);
+    }
+ function calc5()
+    {
+        with(document.form05)
+            txt10.value = eval(txt09.value);
+    }
+ function calc6()
+    {
+        with(document.form06)
+            txt12.value = eval(txt11.value);
+    }
+    
+    </script>
+</head>
+<body>
+	<br />
+    <br><br>
+エクセル起動するとき重いので作りました。<br>
+「この企業大丈夫なん？シート」<br>
+Ctrl + C でコピー<br>
+ + - * /
+<br><br><br>
+
+<form name="form01">
+ROA計算式：<input type="text" name="txt01" size="30"><br>
+<input type="button" value="計算" onClick="calc1()">当期純利益÷総資本or総資産<br>
+ROA：<input type="text" name="txt02" size="10"><br>
+※借金と自己資本の合計(自分の持つ資産の合計)に対し、<br>当期純利益をどの程度上げたかを示す。<br>
+企業経営の安定性を示す指標。<br>
+<br><br>
+</form>
+
+<form name="form02">
+ROE計算式：<input type="text" name="txt03" size="30"><br>
+<input type="button" value="計算" onClick="calc2()">当期純利益÷自己資本(=株主資本)<br>
+ROE：<input type="text" name="txt04" size="10"><br>
+※銀行の金利が２% ROEが１%のとき、株主は銀行に預金した方が得する。<br>
+企業経営の効率性の高さを示す指標。<br>
+ただ、ROEは借金が多い企業ほど高くなりやすい。<br>
+なぜなら総資本に対する自己資本比率が高いほど、ROEも高くなる計算になるから。<br>
+政府はROE8%を目指してる。海外投資家も日本企業に注目しだしたから。<br>
+<br><br>
+</form>
+
+<form name="form03">
+売上総利益率計算式：<input type="text" name="txt05" size="30"><br>
+<input type="button" value="計算" onClick="calc3()">売上総利益÷売上<BR>
+売上総利益率：<input type="text" name="txt06" size="10"><br>
+※売上のうち、売上総利益がどのぐらい占めるかを示す。<br>
+売上原価(製造原価)に対して売上総利益を知っておくと、大体の儲けがどれぐらいあるかが分かる。<br>
+●製造原価＝直接製造費＋製造間接費<br>
+・直接製造費＝直接材料費＋直接労務費＋直接経費<br>
+・製造間接費＝間接材料費＋間接労務費＋間接経費<br>
+営業費（販売費および一般管理費）は製造原価に含まれない。<br>
+<br><br>
+</form>
+
+<form name="form04">
+営業利益率計算式：<input type="text" name="txt07" size="30"><br>
+<input type="button" value="計算" onClick="calc4()">営業利益÷売上<BR>
+営業利益率：<input type="text" name="txt08" size="10"><br>
+※本業でどのぐらい稼いでいるかを示す。<br>
+<br><br>
+</form>
+
+<form name="form05">
+経常利益率計算式：<input type="text" name="txt09" size="30"><br>
+<input type="button" value="計算" onClick="calc5()">経常利益÷売上<BR>
+経常利益率：<input type="text" name="txt10" size="10"><br>
+※本業とその他の特別な収益（株とか）でどのぐらい稼いでいるかを示す。<br>
+<br><br>
+</form>
+
+<form name="form06">
+すぐに会社潰れるか否か：<input type="text" name="txt11" size="30"><br>
+<input type="button" value="計算" onClick="calc6()">流動負債-流動資産<BR>
+マイナスだったら潰れる：<input type="text" name="txt12" size="10"><br>
+※今すぐ返さなきゃならん借金を返済できるかどうかを示す。<br>
+●流動～～<br>
+・流動負債＝通常、1年以内に返さなきゃならない借金<br>
+・流動資産＝通常、1年以内に現金化できるもの<br>
+受取手形、売掛金、有価証券、現金・預金、手元の設備・備品etc<br>
+<br><br>
+
+</form>
+</body>
+</html>
